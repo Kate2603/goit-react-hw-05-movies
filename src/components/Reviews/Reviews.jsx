@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Outlet } from 'react-router-dom';
 import API from '../../services/api';
 import {
   ReviewsList,
@@ -40,6 +40,7 @@ const Reviews = () => {
       ) : (
         <Message>We don't have any reviews for this movie</Message>
       )}
+      <Outlet />
     </>
   );
 };

@@ -97,7 +97,7 @@ const MovieDetails = () => {
         </MovieAdditionalList>
       </MovieAdditionalBox>
 
-      <Suspense fallback={null}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
     </main>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 import API from '../../services/api';
 import { Loader } from 'components/Loader/Loader';
 import { BASE_IMAGE_URL, PlACEHOLDER_IMAGE_URL } from 'constants/constants';
@@ -49,6 +50,7 @@ const Home = () => {
           />
         ))}
       </MoviesList>
+      <Outlet />
     </main>
   );
 };

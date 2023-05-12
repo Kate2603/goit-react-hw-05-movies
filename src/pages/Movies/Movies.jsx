@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Outlet } from 'react-router-dom';
 import API from '../../services/api';
 import { toast } from 'react-toastify';
 import { MoviesList } from './Movies.styled';
@@ -77,6 +77,7 @@ const Movies = () => {
           />
         ))}
       </MoviesList>
+      <Outlet />
     </main>
   );
 };
