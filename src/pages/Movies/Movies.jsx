@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams, Outlet } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import API from '../../services/api';
 import { toast } from 'react-toastify';
 import { MoviesList } from './Movies.styled';
@@ -61,9 +61,7 @@ const Movies = () => {
   return (
     <main>
       <SearchForm onSubmit={handleFormSubmit} onChange={updateQueryString} />
-
       {isLoading && <Loader />}
-
       <MoviesList>
         {movies.map(({ id, title, poster_path, vote_average }) => (
           <MoviesItem
@@ -77,7 +75,7 @@ const Movies = () => {
           />
         ))}
       </MoviesList>
-      <Outlet />
+      {/* <Outlet /> */}
     </main>
   );
 };
